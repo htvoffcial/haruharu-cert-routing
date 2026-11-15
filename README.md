@@ -32,6 +32,8 @@ certificate **by URL path** instead of by connection. `/a/*` is served with Cert
 `/b/*` with Certificate B — same hostname, same port, no redirects. The TLS 1.3 stack is
 implemented from scratch in a single Python file, just to prove it can be done natively.
 
+📖 **Write-up (Japanese):** [本当に同じホスト名でパスごとにTLS証明書を変えてみた（リダイレクトなし）](https://qiita.com/sharu2920/items/62d51b317758e3cd6214) — how the rewind works, the Safari war story, and the honest limitations.
+
 ```hcrt
 listen [::]:443
 
