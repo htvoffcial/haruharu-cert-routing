@@ -1,0 +1,4 @@
+*.key
+certs/
+.hcrt-ticket-key.bin
+__pycache__/

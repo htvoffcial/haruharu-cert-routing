@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haruharu Cert Routing 実験サイト</title>
+<style>body{font-family:sans-serif;background:#222;color:#eee;margin:0;padding:48px 24px}
+main{max-width:720px;margin:0 auto} a{color:#ffcf87} .card{background:#2c2c2c;border-radius:12px;padding:20px;margin:16px 0}
+small{opacity:.75}</style></head><body><main>
+<h1>Haruharu Cert Routing</h1>
+<p>同じホスト名・同じポートのまま、URLのパスによって TLS 証明書が切り替わる実験サイトです。
+下の2つのサイトは「姉妹サイト」で、リンクを行き来するたびに鍵アイコンの証明書が
+こっそり入れ替わります（URLのホスト名は変わりません）。</p>
+<div class="card"><b>証明書A のゾーン</b><br>
+<a href="/a/cafe">Cafe Akari（/a/cafe）</a> ― 自家焙煎カフェのサンプルサイト</div>
+<div class="card"><b>証明書B のゾーン</b><br>
+<a href="/b/create">クリエイト精工（/b/create）</a> ― CNC加工会社のサンプルサイト</div>
+<p><small>このページの配信証明書シリアル: %%HCRT_CERT_SERIAL%%（発行者: %%HCRT_CERT_ISSUER%%）／ 選択方法: %%HCRT_HOW%%</small></p>
+</main></body></html>

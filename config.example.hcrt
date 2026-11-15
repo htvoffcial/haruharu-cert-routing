@@ -1,0 +1,21 @@
+# Haruharu Cert Routing 設定ファイル (config.hcrt)
+# 書式:
+#   listen <addr>:<port>          例: listen [::]:443 / listen 0.0.0.0:443 / listen 443
+#   host <hostname> {             SNI で選択されるホストブロック ( } で閉じる )
+#     default <cert.pem> <key.pem>            ルートに属さない接続の既定証明書
+#     route <prefix> <cert.pem> <key.pem> root <dir>
+#                                   prefix は "/a/*" のような前方一致 (末尾 /* 必須ではない)
+#                                   root はそのルートの静的ファイル置き場
+#   }
+# パスはこのファイルからの相対パスでも絶対パスでも可。
+# 証明書は ECDSA P-256 のみ (v1)。cert.pem はフルチェーン PEM。
+# HTML 内に %%HCRT_CERT_SERIAL%% 等のプレースホルダを書くと、
+# 実際に提示した証明書の情報で置換されて配信される。
+
+listen [::]:443
+
+host example.com {
+  default certs/a.pem certs/a.key
+  route /a/* certs/a.pem certs/a.key root sites/a-root
+  route /b/* certs/b.pem certs/b.key root sites/b-root
+}
