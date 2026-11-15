@@ -12,6 +12,12 @@
   English README is <a href="README.md">here</a>
 </p>
 
+<p align="center">
+  <img src="docs/demo.gif" alt="デモ: Safariで /a/ から /b/ へ移動すると証明書がA（発行者YE2）からB（発行者YE1）に変わる様子" width="760"><br>
+  <i>実機キャプチャ（iPad Safari）：/a/ は証明書A（発行者 YE2）で配信され、/b/ を開くと
+  ブラウザの証明書ビューアが証明書B（発行者 YE1）を表示します。ホスト名は最初から最後まで同じです。</i>
+</p>
+
 ---
 
 **Haruharu Cert Routing (HCRT)** は、TLS 証明書を「接続」ではなく「URL パス」で選ぶ

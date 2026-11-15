@@ -19,6 +19,12 @@
   日本語版 README は <a href="README.ja.md">こちら</a>
 </p>
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Demo: the certificate changes from A (issuer YE2) to B (issuer YE1) when moving from /a/ to /b/ in Safari" width="760"><br>
+  <i>Real capture (iPad Safari): /a/ is served with Certificate A (issuer YE2). Open /b/ and the
+  browser's own certificate viewer shows Certificate B (issuer YE1). Same hostname throughout.</i>
+</p>
+
 ---
 
 **Haruharu Cert Routing (HCRT)** is an experimental HTTPS server that selects the TLS
